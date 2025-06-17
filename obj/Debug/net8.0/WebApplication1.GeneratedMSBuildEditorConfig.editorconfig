@@ -1,0 +1,253 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebApplication1
+build_property.RootNamespace = WebApplication1
+build_property.ProjectDir = D:\WebApplication1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\WebApplication1
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/WebApplication1/Views/Academic/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Academic/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Academic/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Academic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Attendance/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Attendance/MarkAttendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxNYXJrQXR0ZW5kYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Attendance/MonthlyReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxNb250aGx5UmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/College/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGVnZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/College/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGVnZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/College/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGVnZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/College/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGVnZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Department/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Department/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Department/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Family/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFtaWx5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Family/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFtaWx5XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Family/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFtaWx5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Family/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFtaWx5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Gnfc/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR25mY1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Gnfc/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR25mY1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Gnfc/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR25mY1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Gnfc/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR25mY1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/PersonalDetail/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxEZXRhaWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/PersonalDetail/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxEZXRhaWxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/PersonalDetail/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxEZXRhaWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/PersonalDetail/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxEZXRhaWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Plant/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Plant/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Plant/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Plant/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Posting/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGluZ1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Posting/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGluZ1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Posting/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGluZ1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Posting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdGluZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Shared/_DisplayDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EaXNwbGF5RGVwYXJ0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/TraineePerformance/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVBlcmZvcm1hbmNlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/TraineePerformance/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVBlcmZvcm1hbmNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/TraineePerformance/ReportTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVBlcmZvcm1hbmNlXFJlcG9ydFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Trainee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Trainee/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Trainee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Trainee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/TrainingCompletionReport/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdDb21wbGV0aW9uUmVwb3J0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/TrainingCompletionReport/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdDb21wbGV0aW9uUmVwb3J0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/TrainingCompletionReport/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdDb21wbGV0aW9uUmVwb3J0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/TrainingCompletionReport/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdDb21wbGV0aW9uUmVwb3J0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/TrainingCompletionReport/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdDb21wbGV0aW9uUmVwb3J0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebApplication1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-bddmc6yalx

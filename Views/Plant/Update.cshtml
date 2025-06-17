@@ -1,0 +1,24 @@
+﻿@model WebApplication1.Models.Plant
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Plant.css" asp-append-version="true" />
+}
+
+<div class="page-container">
+    <h1 class="page-title">Edit Plant</h1>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label asp-for="Name" class="control-label">Plant Name <span class="text-danger">*</span></label>
+            <input type="text" asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn save-btn"><i class="fas fa-save"></i> Update</button>
+            <a asp-action="Index" class="btn back-btn"><i class="fas fa-list"></i> Back to List</a>
+        </div>
+    </form>
+</div>

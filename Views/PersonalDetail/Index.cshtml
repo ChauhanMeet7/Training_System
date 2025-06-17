@@ -1,0 +1,81 @@
+﻿@model List<WebApplication1.Models.PersonalDetail>
+
+<head>
+    <link href="~/css/list.css" rel="stylesheet" media="all" />
+</head>
+
+<body>
+    <h2 class="page-title">Personal Detail List</h2>
+
+    <div class="card custom-card">
+        <div class="card-header custom-card-header">
+            <h3 class="italic">
+                <a href="/PersonalDetail/Create" class="btn add-student-btn">
+                    <i class="fa fa-plus-circle"></i> Add Detail
+                </a>
+            </h3>
+            <div class="search-container">
+                <form class="search-form" asp-action="Index" method="GET">
+                    <input name="searchString" class="search-input" type="search" placeholder="Search by name" />
+                    <button class="search-btn" type="submit">Search</button>
+                    <button class="search-btn m-3" asp-action="Index" type="submit">Back to List</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-responsive">
+        <table class="custom-table" id="tbl-list">
+            <thead>
+                <tr>
+
+                    <th>
+                        <a style="color:white; text-decoration:none;" asp-action="Index" asp-route-sortOrder="@ViewData["IdSortParam"]" asp-route-searchString="@Context.Request.Query["searchString"]">
+                            V.T.R ID↧
+                        </a>
+                    </th>
+                    <th>Religion</th>
+                    <th>Gender</th>
+                    <th>Blood_Group</th>
+                    <th>PhysicallyHandicapped</th>
+                   
+                   
+                    <th>LocalAddress</th>
+                    <th>PermanentAddress</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Item in Model)
+                {
+                    <tr>
+                        <td>@(Item.Trainee != null ? Item.Trainee.VTRId : "Not Assigned")</td>
+                        <td>@Item.Religion</td>
+                        <td>@Item.Gender</td>
+                        <td>@Item.Blood_Group</td>
+                        <td>@Item.PhysicallyHandicapped</td>
+                        
+                        
+                        <td>@Item.LocalAddress</td>
+                        <td>@Item.PermanentAddress</td>
+                        <td>
+                            <a asp-action="Edit" asp-controller="PersonalDetail" asp-route-id="@Item.Id" class="btn edit-btn "><i class="fa fa-plus-circle"> Edit</i></a>
+                            <a asp-action="Delete" asp-controller="PersonalDetail" asp-route-id="@Item.Id" class="btn delete-btn "><i class="fa fa-plus-circle"> Delete</i></a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+
+
+
+
+
+
+
+

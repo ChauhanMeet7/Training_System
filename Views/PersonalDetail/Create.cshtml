@@ -1,0 +1,111 @@
+﻿@model WebApplication1.Models.PersonalDetail
+@{
+    ViewData["Title"] = "Create";
+}
+<head>
+    <link href="~/css/add.css" rel="stylesheet" media="all" />
+</head>
+<hr />
+<h6></h6>
+
+<hr />
+<div class="card">
+    <div class="card-header bg-blue-400"><h5><i class='fa fa-check-circle-o'></i> Add new student here(Personal Detail)</h5></div>
+    <div class="card-body">
+        <div class=" row g-6">
+            <div class="col-md-15">
+                <form asp-action="Create" method="post" class="row g-12">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="TraineeId" class="control-label">GNFC Id<span style="color:red">*</span></label>
+                        <select asp-for="TraineeId" class="form-control" asp-items="ViewBag.Vtr">
+                            <option value="">-- Select Id --</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Religion" class="control-label">Religion<span style="color:red">*</span></label>
+                        <input required asp-for="Religion" class="form-control"  />
+                        <span asp-validation-for="Religion" class="text-danger"></span>
+                    </div>
+                    <hr />
+                    <div class="mb-3">
+                        <label for="Gender" class="form-label fw-bold">Gender</label>
+                        <div class="gender-container">
+                            <div class="form-check">
+                                <input asp-for="Gender" class="form-check-input" value="Male" type="radio" id="male">
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check">
+                                <input asp-for="Gender" class="form-check-input" value="Female" type="radio" id="female">
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Blood_Group" class="control-label">Blood Group<span style="color:red">*</span></label>
+                        <select asp-for="Blood_Group" class="form-control">
+                            <option value="">-- Select Blood Group --</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhysicallyHandicapped" class="control-label">Handicapped<span style="color:red">*</span></label>
+                        <select asp-for="PhysicallyHandicapped" class="form-control">
+                            
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Height" class="control-label">Height(cm)<span style="color:red">*</span></label>
+                        <input required asp-for="Height" class="form-control" placeholder="Height(cm)" />
+                        <span asp-validation-for="Height" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Weight" class="control-label">Weight(kg)<span style="color:red">*</span></label>
+                        <input required asp-for="Weight" class="form-control" placeholder="Weight(kg)"  />
+                        <span asp-validation-for="Weight" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MaritalStatus" class="control-label">Married</label>
+                        <select asp-for="MaritalStatus" class="form-control">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="LocalAddress" class="control-label">Local Address<span style="color:red">*</span></label>
+                        <input required asp-for="LocalAddress" class="form-control" placeholder="Address" />
+                        <span asp-validation-for="LocalAddress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="PermanentAddress" class="control-label">Permenant Address<span style="color:red">*</span></label>
+                        <input required asp-for="PermanentAddress" class="form-control" placeholder="Permenant Address" />
+                        <span asp-validation-for="PermanentAddress" class="text-danger"></span>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" value="submit" class="btn btn-success mt-2">Add</button>
+                        <a asp-action="Index" class="btn btn-dark mt-2"><i class="fa fa-plus-circle"> Back to List</i></a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+@* @section Scripts { *@
+@*     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} *@
+@* } *@
+
+

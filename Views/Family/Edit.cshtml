@@ -1,0 +1,171 @@
+﻿@model WebApplication1.Models.Family
+@{
+    ViewData["Title"] = "Edit";
+}
+<head>
+    <link href="~/css/add.css" rel="stylesheet" media="all" />
+</head>
+
+<hr />
+<h6></h6>
+
+<hr />
+<div class="card">
+    <div class="card-header bg-blue-400"><h5><i class='fa fa-check-circle-o'></i> Edit Family Detail</h5></div>
+    <div class="card-body">
+        <div class=" row g-6">
+            <div class="col-md-15">
+                <form asp-action="Edit" method="post" class="row g-12">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @* <div class="form-group"> *@
+                    @*     <label asp-for="TraineeId" class="control-label">Department</label> *@
+                    @*     <select asp-for="TraineeId" class="form-control" asp-items="ViewBag.Vtr"> *@
+                    @*         <option value="">-- Select Id --</option> *@
+                    @*     </select> *@
+                    @* </div> *@
+                    <div class="form-group col-md-6">
+                        <label asp-for="FatherName" class="control-label"></label>
+                        <input required asp-for="FatherName" class="form-control" placeholder="Enter FatherName" />
+                        <span asp-validation-for="FatherName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label asp-for="FatherAge" class="control-label"></label>
+                        <input required asp-for="FatherAge" class="form-control" placeholder="Enter Age" type="number" min="35" />
+                        <span asp-validation-for="FatherAge" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="FatherQulification" class="control-label"></label>
+                        <input required asp-for="FatherQulification" class="form-control" placeholder="Enter Qulification" />
+                        <span asp-validation-for="FatherQulification" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="FatherProfession" class="control-label"></label>
+                        <input required asp-for="FatherProfession" class="form-control" placeholder="Enter Profession" />
+                        <span asp-validation-for="FatherProfession" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="FatherIncome" class="control-label"></label>
+                        <input required asp-for="FatherIncome" class="form-control" placeholder="Enter Income" />
+                        <span asp-validation-for="FatherIncome" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="MotherName" class="control-label"></label>
+                        <input required asp-for="MotherName" class="form-control" placeholder="Enter LastName" />
+                        <span asp-validation-for="MotherName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="MotherAge" class="control-label"></label>
+                        <input required asp-for="MotherAge" class="form-control" placeholder="Enter Age" />
+                        <span asp-validation-for="MotherAge" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="MotherQulification" class="control-label"></label>
+                        <input required asp-for="MotherQulification" class="form-control" placeholder="Enter Qulification" />
+                        <span asp-validation-for="MotherQulification" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="MotherProfession" class="control-label"></label>
+                        <input required asp-for="MotherProfession" class="form-control" placeholder="Enter Profession" />
+                        <span asp-validation-for="MotherProfession" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="MotherIncome" class="control-label"></label>
+                        <input required asp-for="MotherIncome" class="form-control" placeholder="Enter Income" />
+                        <span asp-validation-for="MotherIncome" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="GuardianName" class="control-label"></label>
+                        <input required asp-for="GuardianName" class="form-control" placeholder="Enter Name" />
+                        <span asp-validation-for="GuardianName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="GuardianAge" class="control-label"></label>
+                        <input required asp-for="GuardianAge" class="form-control" placeholder="Enter Age" />
+                        <span asp-validation-for="GuardianAge" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="GuardianQulification" class="control-label"></label>
+                        <input required asp-for="GuardianQulification" class="form-control" placeholder="Enter Qulification" />
+                        <span asp-validation-for="GuardianQulification" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="GuardianProfession" class="control-label"></label>
+                        <input required asp-for="GuardianProfession" class="form-control" placeholder="Enter Profession" />
+                        <span asp-validation-for="GuardianProfession" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="GuardianIncome" class="control-label"></label>
+                        <input required asp-for="GuardianIncome" class="form-control" placeholder="Enter Income" />
+                        <span asp-validation-for="GuardianIncome" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="SisterName" class="control-label"></label>
+                        <input required asp-for="SisterName" class="form-control" placeholder="Enter Name" />
+                        <span asp-validation-for="SisterName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="SisterAge" class="control-label"></label>
+                        <input required asp-for="SisterAge" class="form-control" placeholder="Enter Age" />
+                        <span asp-validation-for="SisterAge" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="SisterQulification" class="control-label"></label>
+                        <input required asp-for="SisterQulification" class="form-control" placeholder="Enter Qulification" />
+                        <span asp-validation-for="SisterQulification" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="SisterProfession" class="control-label"></label>
+                        <input required asp-for="SisterProfession" class="form-control" placeholder="Enter Profession" />
+                        <span asp-validation-for="SisterProfession" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="SisterIncome" class="control-label"></label>
+                        <input required asp-for="SisterIncome" class="form-control" placeholder="Enter Income" />
+                        <span asp-validation-for="SisterIncome" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="BrotherName" class="control-label"></label>
+                        <input required asp-for="BrotherName" class="form-control" placeholder="Enter Name" />
+                        <span asp-validation-for="BrotherName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="BrotherAge" class="control-label"></label>
+                        <input required asp-for="BrotherAge" class="form-control" placeholder="Enter Age" />
+                        <span asp-validation-for="BrotherAge" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="BrotherQulification" class="control-label"></label>
+                        <input required asp-for="BrotherQulification" class="form-control" placeholder="Enter Qulification" />
+                        <span asp-validation-for="BrotherQulification" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="BrotherProgession" class="control-label"></label>
+                        <input required asp-for="BrotherProgession" class="form-control" placeholder="Enter Profession" />
+                        <span asp-validation-for="BrotherProgession" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="BrotherIncome" class="control-label"></label>
+                        <input required asp-for="BrotherIncome" class="form-control" placeholder="Enter Income" />
+                        <span asp-validation-for="BrotherIncome" class="text-danger"></span>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" value="submit" class="btn btn-success mt-2">Update</button>
+                        <a asp-action="Index" class="btn btn-dark mt-2"><i class="fa fa-plus-circle"> Back to List</i></a>
+                    </div>
+                    
+        
+                </form>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+@* @section Scripts { *@
+@*     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} *@
+@* } *@
+
+
+
+

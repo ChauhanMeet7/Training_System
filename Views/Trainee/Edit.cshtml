@@ -1,0 +1,31 @@
+﻿@model WebApplication1.Models.Trainee
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Trainee.css" asp-append-version="true" />
+}
+
+
+
+<div class="page-container">
+    <h1 class="page-title">Edit Trainee</h1>
+<form asp-action="Edit" method="post" class="custom-card">
+
+    <div class="form-group">
+        <label asp-for="VTRId" class="control-label">GNFC ID</label>
+        <input type="text" asp-for="VTRId" class="form-control" />
+        <span asp-validation-for="VTRId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TrainingYear" class="control-label">Training Year</label>
+        <input asp-for="TrainingYear" class="form-control" />
+        <span asp-validation-for="TrainingYear" class="text-danger"></span>
+    </div>
+
+    <div class="form-group button-group">
+        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Update</button>
+        <a asp-action="Index" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back to List</a>
+    </div>
+</form>
+
+</div>

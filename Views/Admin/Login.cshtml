@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Admin Login";
+}
+
+<link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="login-container">
+        <img src="~/images/admin-logo.png" alt="Admin Logo" class="admin-logo" asp-append-version="true" />
+        <h2>Admin Login</h2>
+       
+        <form method="post" asp-controller="Admin" asp-action="Login">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="Username" class="form-control" placeholder="Enter Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="Password" class="form-control" placeholder="Enter Password" required>
+            </div>
+            <button type="submit" class="btn btn-login">Login</button>
+        </form>
+    </div>
+</div>

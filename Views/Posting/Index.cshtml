@@ -1,0 +1,65 @@
+﻿@model List<WebApplication1.Models.Posting>
+
+<head>
+    <link href="~/css/list.css" rel="stylesheet" media="all" />
+</head>
+
+<body>
+    <h2 class="page-title">Posting List</h2>
+    <div class="card custom-card">
+        <div class="card-header custom-card-header">
+            <h3 class="italic">
+                <a href="/Posting/Create" class="btn add-student-btn">
+                    <i class="fa fa-plus-circle"></i> Add Posting
+                </a>
+            </h3>
+            @* <div class="search-container"> *@
+            @*     <form class="search-form" asp-action="Index" method="GET"> *@
+            @*         <input name="searchString" class="search-input" type="search" placeholder="Search by name" /> *@
+            @*         <button class="search-btn" type="submit">Search</button> *@
+            @*         <button class="search-btn m-3" asp-action="Index" type="submit">Back to List</button> *@
+            @*     </form> *@
+
+            @* </div> *@
+        </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-responsive">
+        <table class="custom-table" id="tbl-list">
+            <thead>
+                <tr>
+
+                    
+                    <th>Gnfc Id</th>
+                    <th>Plant</th>
+                    
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var s in Model)
+                {
+                    <tr>
+                        <td>@(s.Trainee != null ? s.Trainee.VTRId : "Not Assigned")</td>
+                        <td>@(s.Plant != null ? s.Plant.Name : "Not Assigned")</td>
+
+                        <td>
+                            <a asp-action="Edit" asp-controller="Posting" asp-route-id="@s.Id" class="btn edit-btn "><i class="fa fa-plus-circle"> Edit</i></a>
+                            <a asp-action="Delete" asp-controller="Posting" asp-route-id="@s.Id" class="btn delete-btn "><i class="fa fa-plus-circle"> Delete</i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+
+
+
+
+
+
+
+

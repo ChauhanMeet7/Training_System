@@ -1,0 +1,93 @@
+﻿@model WebApplication1.Models.Gnfc
+@{
+    ViewData["Title"] = "Create";
+}
+<head>
+    <link href="~/css/add.css" rel="stylesheet" media="all" />
+</head>
+
+<hr />
+<h6></h6>
+<hr />
+<div class="card">
+    <div class="card-header bg-blue-400"><h5><i class='fa fa-check-circle-o'></i> Add new student here(Student Detail)</h5></div>
+    <div class="card-body">
+        <div class=" row g-6">
+            <div class="col-md-15">
+                <form asp-action="Create" method="post" class="row g-12">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="TraineeId" class="control-label">Trainee ID<span style="color:red">*</span></label>
+                        <select asp-for="TraineeId" class="form-control" asp-items="ViewBag.Vtr">
+                            <option value="">-- Select Id --</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="FirstName" class="control-label">First Name<span style="color:red">*</span></label>
+                        <input required asp-for="FirstName" class="form-control" placeholder="Enter First Name" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="LastName" class="control-label">Last Name<span style="color:red">*</span></label>
+                        <input required asp-for="LastName" class="form-control" placeholder="Enter LastName" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="MiddleName" class="control-label">Middle Name<span style="color:red">*</span></label>
+                        <input required asp-for="MiddleName" class="form-control" placeholder="Enter MiddleName" />
+                        <span asp-validation-for="MiddleName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DepartmentId" class="control-label">Department<span style="color:red">*</span></label>
+                        <select asp-for="DepartmentId" class="form-control" asp-items="ViewBag.Departments">
+                            <option value="">-- Select Department --</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Email" class="control-label">Email<span style="color:red">*</span></label>
+                        <input required asp-for="Email" class="form-control" placeholder="Enter Email" type="email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Birth_Date" class="control-label">Birth date<span style="color:red">*</span></label>
+                        <input required asp-for="Birth_Date" type="date" class="form-control" placeholder="Enter DOB" />
+                        <span asp-validation-for="Birth_Date" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="PhoneNumber" class="control-label">Phone<span style="color:red">*</span></label>
+                        <input required asp-for="PhoneNumber" class="form-control" placeholder="Enter PhoneNumber" type="tel" maxlength="10" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CollegeId" class="control-label">College<span style="color:red">*</span></label>
+                        <select asp-for="CollegeId" asp-items="ViewBag.Colleges" class="form-control">
+                            <option value="">-- Select College --</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="AcadamicYear" class="control-label">Academic Year</label>
+                        <input required asp-for="AcadamicYear" class="form-control" placeholder="Enter Academic Year" type="tel" maxlength="4" />
+                        <span asp-validation-for="AcadamicYear" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Semester" class="control-label">Semester<span style="color:red">*</span></label>
+                        <input required asp-for="Semester" class="form-control" placeholder="Enter sem" type="text" maxlength="1" />
+                        <span asp-validation-for="Semester" class="text-danger"></span>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" value="submit" class="btn btn-success mt-2">Add</button>
+                        <a asp-action="Index" class="btn btn-dark mt-2"><i class="fa fa-plus-circle"> Back to List</i></a>
+                    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* @section Scripts { *@
+@*     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} *@
+@* } *@
+
+
+

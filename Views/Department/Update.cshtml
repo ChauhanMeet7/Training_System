@@ -1,0 +1,21 @@
+﻿@model WebApplication1.Models.Department
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/department.css" asp-append-version="true" />
+}
+
+<div class="page-container">
+    <h1 class="page-title">Update Department</h1>
+
+    <form asp-action="Update">
+        <div class="form-group">
+            <label for="name">Department Name</label>
+            <input type="text" id="name" class="form-control" asp-for="Name" required />
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn save-btn">Update</button>
+            <a href="/Department/Index" class="btn back-btn">Back to List</a>
+        </div>
+    </form>
+</div>

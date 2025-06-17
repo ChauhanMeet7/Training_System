@@ -1,0 +1,33 @@
+﻿@model WebApplication1.Models.Academic
+
+@{
+    ViewData["Title"] = "Delete Academic Detail";
+}
+
+<head>
+    <link href="~/css/Delete.css" rel="stylesheet" />
+</head>
+
+<div class="custom-card">
+    <h1 class="page-title">Delete Academic Detail</h1>
+
+    <p class="warning-text">Are you sure you want to delete this Academic Detail?</p>
+
+    <hr />
+
+    <dl class="row details">
+        <dt class="col-sm-3">VTR Id</dt>
+        <dd class="col-sm-9">@Model.TraineeId</dd>
+
+        <dt class="col-sm-3">School</dt>
+        <dd class="col-sm-9">@Model.School</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <div class="button-group">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>

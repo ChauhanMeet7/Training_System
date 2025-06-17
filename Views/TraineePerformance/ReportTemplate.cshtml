@@ -1,0 +1,79 @@
+﻿@model WebApplication1.Models.TraineePerformance
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trainee Performance Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: navy;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Trainee Performance Report</h2>
+
+    <table>
+        <tr>
+            <th>VTR ID</th>
+            <td>@Model.VTRId</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>@Model.TraineeName</td>
+        </tr>
+        <tr>
+            <th>College</th>
+            <td>@Model.CollegeName</td>
+        </tr>
+        <tr>
+            <th>Department</th>
+            <td>@Model.Department</td>
+        </tr>
+        <tr>
+            <th>Attendance Percentage</th>
+            <td>@Model.AttendancePercentage %</td>
+        </tr>
+        <tr>
+            <th>Training Start Date</th>
+            <td>@Model.TrainingStartDate.ToString("dd-MM-yyyy")</td>
+        </tr>
+        <tr>
+            <th>Training End Date</th>
+            <td>@Model.TrainingEndDate.ToString("dd-MM-yyyy")</td>
+        </tr>
+        <tr>
+            <th>Performance Remarks</th>
+            <td>@Model.PerformanceRemarks</td>
+        </tr>
+    </table>
+
+</body>
+</html>

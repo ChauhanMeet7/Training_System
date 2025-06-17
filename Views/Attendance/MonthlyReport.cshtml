@@ -1,0 +1,85 @@
+﻿@model IEnumerable<WebApplication1.Controllers.StudentAttendanceSummary>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/attendance.css" asp-append-version="true" />
+}
+
+<h2 class="page-title">Monthly Attendance Report</h2>
+
+<div class="filter-container">
+    <form method="get">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="month" class="form-label">Select Month:</label>
+                <select name="month" class="form-control">
+                    @for (int i = 1; i <= 12; i++)
+                    {
+                        <option value="@i" selected="@(i == ViewBag.SelectedMonth ? "selected" : null)">
+                            @System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i)
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label for="year" class="form-label">Select Year:</label>
+                <select name="year" class="form-control">
+                    @for (int i = DateTime.Now.Year; i >= DateTime.Now.Year - 5; i--)
+                    {
+                        <option value="@i" selected="@(i == ViewBag.SelectedYear ? "selected" : null)">@i</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label for="vtrId" class="form-label">Enter VTR ID:</label>
+                <input type="number" name="vtrId" class="form-control" value="@ViewBag.SelectedVtrId" placeholder="Enter VTR ID">
+            </div>
+
+            <div class="col-md-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary filter-btn"><i class="fa fa-filter"></i> Filter</button>
+                <a asp-action="Index" class="btn btn-secondary back-btn"><i class="fa fa-arrow-left"></i> Back</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <p class="error-message">@ViewBag.Message</p>
+}
+
+@if (Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table attendance-table">
+            <thead>
+                <tr>
+                    <th>VTR ID</th>
+                    <th>Student Name</th>
+                    <th>Total Present</th>
+                    <th>Total Absent</th>
+                    <th>Total Late</th>
+                    <th>Attendance %</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var record in Model)
+                {
+                    <tr>
+                        <td>@record.VTRId</td>
+                        <td>@record.StudentName</td>
+                        <td>@record.TotalPresent</td>
+                        <td>@record.TotalAbsent</td>
+                        <td>@record.TotalLate</td>
+                        <td class="percentage">@record.AttendancePercentage.ToString("0.00")%</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p class="no-records">No attendance records found for the selected criteria.</p>
+}

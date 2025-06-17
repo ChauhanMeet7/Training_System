@@ -1,0 +1,51 @@
+﻿@model WebApplication1.Models.Posting
+@{
+    ViewData["Title"] = "Edit";
+}
+<head>
+    <link href="~/css/add.css" rel="stylesheet" media="all" />
+</head>
+
+<hr />
+<h6></h6>
+
+<hr />
+<div class="card">
+    <div class="card-header bg-blue-400"><h5><i class='fa fa-check-circle-o'></i> Edit Posting </h5></div>
+    <div class="card-body">
+        <div class=" row g-6">
+            <div class="col-md-15">
+                <form asp-action="Edit" method="post" class="row g-12">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @* <div class="form-group"> *@
+                    @*     <label asp-for="TraineeId" class="control-label">Trainee ID<span style="color:red">*</span></label> *@
+                    @*     <select asp-for="TraineeId" class="form-control" asp-items="ViewBag.Vtr"> *@
+                    @*         <option value="">-- Select Id --</option> *@
+                    @*     </select> *@
+                    @* </div> *@
+
+                    <div class="form-group">
+                        <label asp-for="PlantId" class="control-label">Plants<span style="color:red">*</span></label>
+                        <select asp-for="PlantId" class="form-control" asp-items="ViewBag.Plants">
+                            <option value="">-- Select Department --</option>
+                        </select>
+                    </div>
+
+
+                    <div class="button-container">
+                        <button type="submit" value="submit" class="btn btn-success mt-2">Update</button>
+                        <a asp-action="Index" class="btn btn-dark mt-2"><i class="fa fa-plus-circle"> Back to List</i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+@* @section Scripts { *@
+@*     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} *@
+@* } *@
+
+
+

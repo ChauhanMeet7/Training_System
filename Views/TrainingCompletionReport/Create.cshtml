@@ -1,0 +1,57 @@
+﻿@model WebApplication1.Models.TrainingCompletionReport
+
+@{
+    ViewData["Title"] = "Create Training Completion Report";
+}
+
+    <head>
+        <link href="~/css/add.css" rel="stylesheet" media="all" />
+    </head>
+
+    <hr />
+    <h6></h6>
+
+    <hr />
+    <div class="card">
+        <div class="card-header bg-blue-400"><h5><i class='fa fa-check-circle-o'></i> Add Repot</h5></div>
+        <div class="card-body">
+            <div class=" row g-6">
+                <div class="col-md-15">
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="StudentId"></label>
+        <input asp-for="StudentId" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="TrainingStartDate"></label>
+        <input asp-for="TrainingStartDate" type="date" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="TrainingEndDate"></label>
+        <input asp-for="TrainingEndDate" type="date" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="CompletionStatus"></label>
+        <select asp-for="CompletionStatus" class="form-control" required>
+            <option value="Completed">Completed</option>
+            <option value="Ongoing">Ongoing</option>
+            <option value="Failed">Failed</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="WrittenTestScore"></label>
+        <input asp-for="WrittenTestScore" type="number" class="form-control" min="0" max="100" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="PerformanceRemarks"></label>
+        <textarea asp-for="PerformanceRemarks" class="form-control" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+    <a class="btn btn-dark" asp-action="Index">Back to List</a>
+</form>
+</div>
+</div>
+   
+</div>
+</div>

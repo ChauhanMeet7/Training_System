@@ -1,0 +1,47 @@
+﻿@model WebApplication1.Models.TraineePerformance
+
+@{
+    ViewData["Title"] = "Trainee Details";
+}
+
+<h2 class="text-primary">Trainee Performance Details</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>VTR ID</th>
+        <td>@Model.VTRId</td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>@Model.TraineeName</td>
+    </tr>
+    <tr>
+        <th>College</th>
+        <td>@Model.CollegeName</td>
+    </tr>
+    <tr>
+        <th>Department</th>
+        <td>@Model.Department</td>
+    </tr>
+    <tr>
+        <th>Attendance Percentage</th>
+        <td>@Model.AttendancePercentage %</td>
+    </tr>
+    <tr>
+        <th>Training Start Date</th>
+        <td>@Model.TrainingStartDate.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Training End Date</th>
+        <td>@Model.TrainingEndDate.ToString("dd-MM-yyyy")</td>
+    </tr>
+    <tr>
+        <th>Remarks</th>
+        <td>@Model.PerformanceRemarks</td>
+    </tr>
+</table>
+
+<a href="@Url.Action("GenerateReport", "TraineePerformance", new { id = Model.VTRId })" class="btn btn-success">
+    Generate PDF Report
+</a>
+<a href="@Url.Action("Index", "TraineePerformance")" class="btn btn-secondary">Back</a>

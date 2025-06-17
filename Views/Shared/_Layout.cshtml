@@ -1,0 +1,335 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using WebApplication1.Models
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/list.css" rel="stylesheet"  />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true"> <!-- Add Navbar CSS -->
+    @RenderSection("Styles", required: false) <!-- Ensures page-specific styles load -->
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+    
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <script>
+            function disableBackButton(){
+                window.history.forward();
+            }
+            setTimeout("disableBackButton()","Login");
+            window.onload=function() {null};
+        </script>
+    }
+</head>
+<body style="background-color:#f2f2f2;">
+
+    <header style="position:sticky; top:0; z-index:1020;">
+        <nav class="navbar navbar-expand-lg navbar-dark border-bottom " style="background-color:#712cf9">
+            <div class="container-fluid">
+                <a class="tra" style="
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 22px; /* Slightly smaller font */
+    display: flex;
+    align-items: center;
+    padding: 5px 20px; /* Reduce padding */
+    height: 50px; /* Reduce height */
+" asp-area="" asp-controller="Trainee" asp-action="Index">
+                    <img src="~/images/logo.png" alt="Logo" style="
+        height: 100px; /* Reduce logo height */
+        width: 95px; /* Reduce logo width */
+        margin-right: 10px;
+    " asp-append-version="true" />
+                    Training Management System
+                </a>
+
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll" style="margin-left:20px;">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        @* <li class="nav-item"> *@
+                        @*     <a class="nav-link active" aria-current="page" asp-area="" asp-controller="Home" asp-action="Index">Home</a> *@
+                        @* </li> *@
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <!-- If user is logged in, show Student-related links -->
+                            <li class="nav-item dropdown">
+                                <a style="color:white; font-size:18px; font-weight:bold;"
+                                   class="nav-link dropdown-toggle"
+                                   href="#" id="navbarScrollingDropdown"
+                                   role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Master
+                                </a>
+
+                                <ul class="dropdown-menu bg-light " aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Department" asp-action="Index">Department</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="College" asp-action="Index">College</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Trainee" asp-action="Index">Trainee Id</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Plant" asp-action="Index">Plant</a></li>
+
+                            </ul>
+                            </li>
+                            @* <li class="nav-item"> *@
+                            @*     <a style="color:white ; opacity:80% ;" class="nav-link toggle" asp-area="" asp-controller="Trainee" asp-action="Create">Add Trainee</a> *@
+                            @* </li> *@
+                            
+                            <li class="nav-item dropdown">
+                                <a style="color:white; font-size:18px; font-weight:bold;"
+                                   class="nav-link dropdown-toggle"
+                                   href="#" id="navbarScrollingDropdown"
+                                   role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Transction
+                                </a>
+                                
+                                <ul class="dropdown-menu bg-light " aria-labelledby="navbarScrollingDropdown">
+                                    @* <li><a class="dropdown-item" asp-area="" asp-controller="Trainee" asp-action="Index">Trainee Id</a></li> *@
+
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Gnfc" asp-action="Index">Student Detail</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="PersonalDetail" asp-action="Index">Personal Detail</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Family" asp-action="Index">Family Detail</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Academic" asp-action="Index">Academic Detail</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Posting" asp-action="Index">Posting</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a style="color:white; font-size:18px; font-weight:bold;"
+                                   class="nav-link dropdown-toggle"
+                                   href="#" id="navbarScrollingDropdown"
+                                   role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Attendance
+                                </a>
+                                
+                            
+                                <ul class="dropdown-menu bg-light " aria-labelledby="navbarScrollingDropdown">
+                                    @* <li><a class="dropdown-item" asp-area="" asp-controller="Trainee" asp-action="Index">Trainee Id</a></li> *@
+
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Attendance" asp-action="Index">Attendance List</a></li>
+                                    @* <li><a class="dropdown-item" asp-area="" asp-controller="Attendance" asp-action="MarkAttendance">Mark Attendance List</a></li> *@
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Attendance" asp-action="MonthlyReport">Monthly Report</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a class="nav-link" style="color:white; font-size:18px; font-weight:bold;" asp-controller="TrainingCompletionReport" asp-action="Index">Training Completion Reports</a></li>
+
+                            /*<li class="nav-item dropdown">
+                                <a style="color:white; font-size:18px; font-weight:bold;"
+                                   class="nav-link dropdown-toggle"
+                                   href="#" id="navbarScrollingDropdown"
+                                   role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Report
+                                </a>
+
+                                <ul class="dropdown-menu bg-light">
+                                    <li><a class="dropdown-item" asp-controller="TraineePerformance" asp-action="Index">Trainee Performance List</a></li>
+                                    <li><a class="dropdown-item" asp-controller="TraineePerformance" asp-action="Details">Trainee Details</a></li>
+                                </ul>
+                            </li>*/
+                                   
+                                
+                            
+                            <li class="nav-item">
+                                <form method="post" asp-controller="Admin" asp-action="Logout" id="logout-form">
+                                    <button type="submit" class="btn btn-danger" style="position:absolute; right:20px;">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <!-- If user is not logged in, show Login link -->
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Admin" asp-action="Login">Login</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container"  >
+        <main role="main" class="pb-3" >
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="container">
+            <span>&copy; 2025 - <strong>Training Management System</strong></span>
+            <span class="footer-links">
+                <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a> 
+                
+            </span>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+@using Microsoft.AspNetCore.Identity
+@using WebApplication1.Models
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/list.css" rel="stylesheet"  />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+   
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <script>
+            function disableBackButton(){
+                window.history.forward();
+            }
+            setTimeout("disableBackButton()","Login");
+            window.onload=function() {null};
+        </script>
+    }
+</head>
+<body style="background-color:#f2f2f2;">
+
+    <header style="position:sticky; top:0; z-index:1020;">
+        <nav class="navbar navbar-expand-lg navbar-dark border-bottom " style="background-color:#712cf9">
+            <div class="container-fluid">
+                <a class="tra" style="color:#fff;text-decoration:none;font-weight:700;font-size:20px;margin-left:50px;" asp-area="" asp-controller="Trainee" asp-action="Index">Training System</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll" style="margin-left:20px;">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        @* <li class="nav-item"> *@
+                        @*     <a class="nav-link active" aria-current="page" asp-area="" asp-controller="Home" asp-action="Index">Home</a> *@
+                        @* </li> *@
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <!-- If user is logged in, show Student-related links -->
+                            <li class="nav-item dropdown">
+                                <a style="color:white ; opacity:80% ;" class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Master
+                                </a>
+                                <ul class="dropdown-menu bg-light " aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Department" asp-action="Index">Department</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="College" asp-action="Index">College</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Trainee" asp-action="Index">Trainee Id</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Plant" asp-action="Index">Plant</a></li>
+
+                            </ul>
+                            </li>
+                            @* <li class="nav-item"> *@
+                            @*     <a style="color:white ; opacity:80% ;" class="nav-link toggle" asp-area="" asp-controller="Trainee" asp-action="Create">Add Trainee</a> *@
+                            @* </li> *@
+                            <li class="nav-item dropdown">
+                                <a style="color:white ; opacity:80% ;" class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Transction
+                                </a>
+                                <ul class="dropdown-menu bg-light " aria-labelledby="navbarScrollingDropdown">
+                                    @* <li><a class="dropdown-item" asp-area="" asp-controller="Trainee" asp-action="Index">Trainee Id</a></li> *@
+
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Gnfc" asp-action="Index">Personal Detail</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="PersonalDetail" asp-action="Index">General Detail</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Family" asp-action="Index">Family Detail</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Academic" asp-action="Index">Academic Detail</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Posting" asp-action="Index">Posting</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a style="color:white ; opacity:80% ;" class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Attendance
+                                </a>
+                                <ul class="dropdown-menu bg-light " aria-labelledby="navbarScrollingDropdown">
+                                    @* <li><a class="dropdown-item" asp-area="" asp-controller="Trainee" asp-action="Index">Trainee Id</a></li> *@
+
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Attendance" asp-action="Index">Attendance List</a></li>
+                                    @* <li><a class="dropdown-item" asp-area="" asp-controller="Attendance" asp-action="MarkAttendance">Mark Attendance List</a></li> *@
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Attendance" asp-action="MonthlyReport">Monthly Report</a></li>
+
+                                </ul>
+                               </li>
+                            <li class="nav-item">
+                                <form method="post" asp-controller="Admin" asp-action="Logout" id="logout-form">
+                                    <button type="submit" class="btn btn-danger" style="position:absolute; right:20px;">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <!-- If user is not logged in, show Login link -->
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Admin" asp-action="Login">Login</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container"  >
+        <main role="main" class="pb-3" >
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top border-1 footer text-muted ">
+        <div class="container">
+            &copy; 2025 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

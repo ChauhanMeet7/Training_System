@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.Trainee
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Delete.css" asp-append-version="true" />
+}
+
+
+
+<div class="custom-card">
+    <h1 class="page-title">Delete Trainee</h1>
+    <p class="warning-text">Are you sure you want to delete this Trainee?</p>
+    <hr />
+    <dl class="row details">
+        <dt class="col-sm-4">VTR ID:</dt>
+        <dd class="col-sm-8">@Model.VTRId</dd>
+
+        <dt class="col-sm-4">Training Year:</dt>
+        <dd class="col-sm-8">@Model.TrainingYear</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group button-group">
+            <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+            <a asp-action="Index" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Cancel</a>
+        </div>
+    </form>
+</div>

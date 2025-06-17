@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebApplication1.Models.TrainingCompletionReport>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/attendance.css" asp-append-version="true" />
+}
+<h2 class="page-title">Training Completion Reports</h2>
+<a class="btn btn-primary mb-3" asp-action="Create">Add New Report</a>
+<table class="table table-striped table-hover shadow-lg">
+    <thead class="thead-dark">
+
+        <tr>
+            <th>Trainee ID</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Completion Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var report in Model)
+        {
+            <tr>
+                <td>@report.StudentId</td>
+                <td>@report.TrainingStartDate.ToShortDateString()</td>
+                <td>@report.TrainingEndDate.ToShortDateString()</td>
+                <td>@report.CompletionStatus</td>
+                <td>
+                    <a class="btn btn-success btn-sm" asp-action="Edit" asp-route-id="@report.ReportID">Edit</a>
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@report.ReportID">Delete</a>
+                    <a class="btn btn-secondary btn-sm" asp-action="Details" asp-route-id="@report.ReportID">Details</a>
+                    <a class="btn btn-info btn-sm" asp-action="GeneratePDF" asp-route-id="@report.ReportID">Download PDF</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

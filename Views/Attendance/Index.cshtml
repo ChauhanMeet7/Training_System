@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApplication1.Models.Attendance>
+@section Styles {
+    <link rel="stylesheet" href="~/css/attendance.css" asp-append-version="true" />
+}
+<h2 class="page-title">Attendance Records</h2>
+
+<a href="/Attendance/MarkAttendance" class="btn btn-primary mb-3">Mark Attendance</a>
+
+<table class="table table-striped table-hover shadow-lg">
+    <thead class="thead-dark">
+        <tr>
+            <th>Student</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model)
+        {
+            <tr>
+                <td>@record.Student.FirstName @record.Student.LastName</td>
+                <td>@record.Date.ToShortDateString()</td>
+                <td>@record.TimeRecorded</td>
+                <td>
+                    <span class="status-badge @record.Status.ToLower()">
+                        <b>@record.Status</b>
+                    </span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

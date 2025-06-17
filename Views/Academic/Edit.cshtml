@@ -1,0 +1,62 @@
+﻿@model WebApplication1.Models.Academic
+@{
+    ViewData["Title"] = "Edit";
+}
+<head>
+    <link href="~/css/add.css" rel="stylesheet" media="all" />
+</head>
+
+<hr />
+<h6></h6>
+
+<hr />
+<div class="card">
+    <div class="card-header bg-blue-400"><h5><i class='fa fa-check-circle-o'></i> Edit Academic Detail</h5></div>
+    <div class="card-body">
+        <div class=" row g-6">
+            <div class="col-md-15">
+                <form asp-action="Edit" method="post" class="row g-12">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    
+                    <div class="form-group col-md-6">
+                        <label asp-for="Examination" class="control-label"></label>
+                        <input required asp-for="Examination" class="form-control" placeholder="m" />
+                        <span asp-validation-for="Examination" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Board" class="control-label"></label>
+                        <input required asp-for="Board" class="form-control" placeholder="m" />
+                        <span asp-validation-for="Board" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Passing_year" class="control-label"></label>
+                        <input required asp-for="Passing_year" class="form-control" placeholder="m" />
+                        <span asp-validation-for="Passing_year" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="School" class="control-label"></label>
+                        <input required asp-for="School" class="form-control" placeholder="m" />
+                        <span asp-validation-for="School" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Percentage" class="control-label"></label>
+                        <input required asp-for="Percentage" class="form-control" placeholder="m" />
+                        <span asp-validation-for="Percentage" class="text-danger"></span>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" value="submit" class="btn btn-success mt-2">Update</button>
+                        <a asp-action="Index" class="btn btn-dark mt-2"><i class="fa fa-plus-circle"> Back to List</i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+@* @section Scripts { *@
+@*     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} *@
+@* } *@
+
+
+

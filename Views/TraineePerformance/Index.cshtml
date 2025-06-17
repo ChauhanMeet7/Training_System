@@ -1,0 +1,43 @@
+﻿@model IEnumerable<WebApplication1.Models.TraineePerformance>
+
+@{
+    ViewData["Title"] = "Trainee Performance List";
+}
+<head>
+    <link href="~/css/list.css" rel="stylesheet" media="all" />
+</head>
+<h2>Trainee Performance List</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>VTR ID</th>
+            <th>Name</th>
+            <th>College</th>
+            <th>Department</th>
+            <th>Attendance %</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Remarks</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trainee in Model)
+        {
+            <tr>
+                <td>@trainee.VTRId</td>
+                <td>@trainee.TraineeName</td>
+                <td>@trainee.CollegeName</td>
+                <td>@trainee.Department</td>
+                <td>@trainee.AttendancePercentage%</td>
+                <td>@trainee.TrainingStartDate.ToShortDateString()</td>
+                <td>@trainee.TrainingEndDate.ToShortDateString()</td>
+                <td>@trainee.PerformanceRemarks</td>
+                <td>
+                    <a asp-controller="TraineePerformance" asp-action="Details" asp-route-id="@trainee.VTRId" class="btn btn-info">View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

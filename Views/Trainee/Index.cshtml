@@ -1,0 +1,65 @@
+﻿@model List<WebApplication1.Models.Trainee>
+
+<head>
+<link href="~/css/list.css" rel="stylesheet" media="all" />
+</head>
+
+
+<h2 class="page-title">Trainee List</h2>
+
+<div class="card custom-card">
+    <div class="card-header custom-card-header">
+        <h3 class="italic">
+            <a href="/Trainee/Create" class="btn add-student-btn">
+                <i class="fa fa-plus-circle"></i> Add Trainee
+            </a>
+        </h3>
+        <div class="search-container">
+            <form class="search-form" asp-action="Index" method="GET">
+                <input name="searchString" class="search-input" type="search" placeholder="Search by VTR ID or Year" />
+                <button class="search-btn" type="submit">Search</button>
+                <button class="search-btn m-3" asp-action="Index" type="submit">Back to List</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Table Section -->
+<div class="table-responsive">
+    <table class="custom-table" id="tbl-list">
+        <thead>
+            <tr>
+                <th>VTR ID</th>
+                <th>Training Year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                @foreach (var trainee in Model)
+                {
+                    <tr>
+                        <td>@trainee.VTRId</td>
+                        <td>@trainee.TrainingYear</td>
+                        <td>
+                            <a asp-action="Edit" asp-controller="Trainee" asp-route-id="@trainee.Id" class="btn edit-btn">
+                                <i class="fa fa-edit"></i> Edit
+                            </a>
+                            <a asp-action="Delete" asp-controller="Trainee" asp-route-id="@trainee.Id" class="btn delete-btn">
+                                <i class="fa fa-trash"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3" class="text-center">No trainees found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

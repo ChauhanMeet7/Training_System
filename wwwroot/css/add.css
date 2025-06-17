@@ -1,0 +1,220 @@
+﻿/* General Page Styling */
+body {
+    background: linear-gradient();
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centered Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Page Title */
+.page-title, h6 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Card Styling */
+.card {
+    background: #87CEFA;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+    /* Hover Effect */
+    .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+/* Card Header */
+.card-header {
+    background: #34495e;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 18px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #34495e;
+}
+
+/* Input and Select Fields */
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #f4f4f4;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+    input:focus, select:focus {
+        border-color: #8e44ad;
+        outline: none;
+        box-shadow: 0 0 5px rgba(142, 68, 173, 0.5);
+        background: #ffffff;
+    }
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Common Button Styling */
+.btn {
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+/* Green Add Button */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+/* Gray Back to List Button */
+.btn-dark {
+    background-color: #007bff;
+    color: white;
+    font-style: normal;
+}
+
+    .btn-dark:hover {
+        background-color: #0056b3;
+    }
+
+/* Danger Buttons */
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-danger:hover {
+        background-color: #c0392b;
+    }
+
+/* Error Messages */
+.text-danger {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+/* Gender Selection Styling */
+.gender-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between radio buttons */
+    margin-top: 5px;
+}
+
+/* Radio Button Wrapper */
+.form-check {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Custom Radio Button Styling */
+.form-check-input {
+    appearance: none; /* Removes default browser styling */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #6c757d; /* Gray border */
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+    .form-check-input:checked {
+        background-color: #28a745; /* Green when selected */
+        border-color: #28a745;
+    }
+
+    .form-check-input::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .form-check-input:checked::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+/* Label Styling */
+.form-check-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #34495e;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* Error Message Styling */
+.text-danger {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+}

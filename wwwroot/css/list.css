@@ -1,0 +1,145 @@
+﻿/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h2.page-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #4e73df;
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.custom-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+.add-student-btn, .search-btn {
+    background-color: #4e73df;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+    .add-student-btn:hover, .search-btn:hover {
+        background-color: #2e59d9;
+    }
+
+/* Search Section Styles */
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+    .search-input:focus {
+        border-color: #4e73df;
+        outline: none;
+    }
+
+/* Table Styling */
+.custom-table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .custom-table th, .custom-table td {
+        padding: 12px;
+        text-align: left;
+        font-size: 14px;
+        border-bottom: 3px solid #ddd;
+    }
+
+    .custom-table th {
+        background-color: #4e73df;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .custom-table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+/* Action Buttons */
+.edit-btn, .delete-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    color: white !important;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: green !important;
+}
+
+.delete-btn {
+    background-color: red !important;
+}
+
+.edit-btn:hover {
+    background-color: darkgreen !important;
+}
+
+.delete-btn:hover {
+    background-color: darkred !important;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .custom-table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .edit-btn, .delete-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

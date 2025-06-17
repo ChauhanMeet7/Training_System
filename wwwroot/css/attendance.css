@@ -1,0 +1,277 @@
+﻿/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #6a0dad; /* Deep Purple */
+    margin-bottom: 20px;
+}
+
+/* Filter Section */
+.filter-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.filter-btn {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.back-btn {
+    background-color: #6c757d;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Error Message */
+.error-message {
+    text-align: center;
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Attendance Table */
+.attendance-table {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+    .attendance-table th {
+        background: #4e73df;
+        color: white;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .attendance-table td {
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .attendance-table .percentage {
+        font-weight: bold;
+        color: #28a745;
+    }
+
+/* No Records Message */
+.no-records {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .filter-btn, .back-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #6a0dad; /* Deep Purple */
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+.form-container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Submit Button */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+/* Delete Button */
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* General Page Styling */
+.page-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Attendance Table Styling */
+.table {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .table thead {
+        background: #4e73df;
+        color: #ffffff;
+    }
+
+    .table th, .table td {
+        padding: 12px;
+        text-align: left;
+        font-size: 16px;
+    }
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Attendance Status Badges */
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+}
+
+    .status-badge.present {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .status-badge.absent {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .status-badge.late {
+        background-color: #ff9800;
+        color: white;
+    }
+
+/* Buttons Styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+.btn-dark {
+    background-color: #007bff;
+    color: white;
+    font-style: normal;
+}
+
+    .btn-dark:hover {
+        background-color: #0056b3;
+    }

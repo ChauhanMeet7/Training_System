@@ -1,0 +1,43 @@
+﻿/* 🔹 Attractive Footer Styling */
+.custom-footer {
+    background: linear-gradient(90deg, #712cf9, #5a1ec7); /* Gradient color */
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    border-top: 3px solid #3f0fb3; /* Darker border on top */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+    /* 🟡 Footer Links */
+    .custom-footer .footer-links a {
+        color: #ffd700; /* Gold color */
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+
+        .custom-footer .footer-links a:hover {
+            text-decoration: underline;
+            color: #ffffff; /* White on hover */
+        }
+
+/* 📌 Ensures Content Does Not Overlap Footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full page height */
+    margin: 0;
+}
+
+/* 📌 Push content up so footer remains at bottom */
+main {
+    flex: 1;
+    padding-bottom: 60px; /* Prevent content overlap */
+}
